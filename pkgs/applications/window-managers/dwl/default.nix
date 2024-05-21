@@ -76,7 +76,7 @@ stdenv.mkDerivation (finalAttrs: {
   '';
 
   meta = {
-    homepage = "https://github.com/djpohly/dwl/";
+    homepage = "https://codeberg.org/dwl/dwl";
     description = "Dynamic window manager for Wayland";
     longDescription = ''
       dwl is a compact, hackable compositor for Wayland based on wlroots. It is
@@ -86,10 +86,9 @@ stdenv.mkDerivation (finalAttrs: {
 
       - Easy to understand, hack on, and extend with patches
       - One C source file (or a very small number) configurable via config.h
-      - Limited to 2000 SLOC to promote hackability
       - Tied to as few external dependencies as possible
     '';
-    changelog = "https://github.com/djpohly/dwl/releases/tag/v${finalAttrs.version}";
+    changelog = "https://codeberg.org/dwl/dwl/src/branch/main/CHANGELOG.md#${finaAttrs.version}"
     license = lib.licenses.gpl3Only;
     maintainers = [ lib.maintainers.AndersonTorres ];
     inherit (wayland.meta) platforms;
